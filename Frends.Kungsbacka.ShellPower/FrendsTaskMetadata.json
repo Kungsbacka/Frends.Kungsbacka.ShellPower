@@ -1,0 +1,13 @@
+﻿{
+	"Tasks": [
+		{
+			"TaskMethod": "Frends.Kungsbacka.ShellPower.PS.CreateSession"
+		},
+		{
+			"TaskMethod": "Frends.Kungsbacka.ShellPower.PS.RemoveSession"
+		},
+		{
+			"TaskMethod": "Frends.Kungsbacka.ShellPower.PS.InvokeCommand"
+		}
+	]
+}
