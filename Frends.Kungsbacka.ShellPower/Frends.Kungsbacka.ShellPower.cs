@@ -18,7 +18,7 @@ namespace Frends.Kungsbacka.ShellPower
             };
         }
 
-        public static RemoveSessionResult RemoveSession(RemoveSessionParameters input)
+        public static RemoveSessionResult RemoveSession([PropertyTab] RemoveSessionParameters input)
         {
             if (input != null && input.Session != null)
             {
@@ -28,7 +28,7 @@ namespace Frends.Kungsbacka.ShellPower
             return new RemoveSessionResult();
         }
 
-        public static InvokeCommandResult InvokeCommand(InvokeCommandParameters input, [PropertyTab] InvokeCommandOptions options)
+        public static InvokeCommandResult InvokeCommand([PropertyTab] InvokeCommandParameters input, [PropertyTab] InvokeCommandOptions options)
         {
             IDictionary parameters = new Hashtable(input.Parameters.Length);
             foreach (CommandParameter param in input.Parameters)
