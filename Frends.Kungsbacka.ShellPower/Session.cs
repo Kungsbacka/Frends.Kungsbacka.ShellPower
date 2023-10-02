@@ -3,7 +3,6 @@ using System.Text;
 using System.Management.Automation;
 using System.Management.Automation.Runspaces;
 using Newtonsoft.Json.Linq;
-using Microsoft.PowerShell.Commands;
 
 namespace Frends.Kungsbacka.ShellPower
 {
@@ -56,7 +55,7 @@ namespace Frends.Kungsbacka.ShellPower
             ps.Runspace = _runspace;
             ps.AddCommand(command)
                     .AddParameters(parameters)
-                .AddCommand("ConvertTo-Json")
+                    .AddCommand("ConvertTo-Json")
                     .AddParameter("Depth", 10)
                     .AddParameter("Compress")
                     .AddParameter("ErrorAction", "SilentlyContinue");
